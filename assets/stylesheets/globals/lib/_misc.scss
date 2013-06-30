@@ -1,0 +1,36 @@
+// Miscellaneous Styling Elements
+// -----------------------------
+
+// two line ellipsis
+@mixin twoline-ellipsis {
+  -webkit-line-clamp: 2;
+  @include display-box;
+  @include box-orient(vertical);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Test class for identifying selections
+.mw-testing {
+  border: 4px solid purple !important;
+  background: #555;
+  overflow: hidden;
+  margin: 2px 0;
+}
+
+// Margin
+.mw-margin {
+  margin: $spacing;
+}
+
+// Center
+.mw-center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+// This class can be applied in tritium, to hide what only scss can't do for you.
+.mw-hide {
+  display: none;
+}

@@ -1,0 +1,104 @@
+// BARS
+// -----------------------------
+
+/*
+  - bar-base: build bars using this
+  - bar-link: styles for bars that have links
+  - bar-accordion: styles for bars that are accordions
+  - bar-gray1: bar using gray1 as a color
+  - bar-gray2: bar using gray2 as a color
+*/
+
+// Global styles applied to all bars
+@mixin bar-base {
+  position: relative;
+  padding: $padding;
+  line-height: 1.4;
+  font-size: $h3-size;
+  font-weight: bold;
+  text-decoration: none;
+  a {
+    display: block;
+    color: inherit;
+    margin-left: 10px;
+  }
+}
+
+// Bars that are links
+@mixin bar-link {
+  &:after {
+    @include sprites-blackArrowRight;
+    position: absolute;
+    top: 50%;
+    right: 9px;
+    font-size: 32px;
+    margin-top: -18px;
+    content: "";
+    padding: 0;
+  }
+}
+
+// Bars that are accordions
+@mixin bar-accordion {
+  /* accordion closed */
+  &[data-ur-state="disabled"] {
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      font-size: 32px;
+      margin-top: -19px;
+      content: "";
+      @include sprites-blackPlus;
+    }
+  }
+
+  /* accordion open */
+  &[data-ur-state="enabled"] {
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      font-size: 32px;
+      margin-top: -19px;
+      content: "";
+      @include sprites-blackMinus;
+    }
+  }
+}
+
+@mixin bar-gray1 {
+  @include bar-base;
+  @include bar-link;
+  background: $gray1;
+  border-top: $border-gray3;
+  color: $gray5;
+}
+
+@mixin bar-gray2 {
+  @include bar-base;
+  @include bar-accordion;
+  background: $gray2;
+  border-top: $border-gray3;
+  color: $gray5;
+}
+
+@mixin bar-green2 {
+  @include bar-base;
+  @include bar-accordion;
+  background: $green2;
+  border-top: $border-green2;
+  color: $green4;
+}
+
+.mw-bar-gray1 {
+  @include bar-gray1;
+}
+
+.mw-bar-gray2 {
+  @include bar-gray2;
+}
+
+.mw-bar-green2 {
+  @include bar-green2;
+}

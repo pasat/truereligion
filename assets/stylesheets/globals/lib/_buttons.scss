@@ -1,0 +1,97 @@
+// BUTTONS
+// -----------------------------
+
+/*
+  btn-base        - base button to build off of
+  btn-mixer       - mixin for specific buttons to levarge
+  btn-green1      - btn using green1 color
+  btn-green2      - btn using green2 color
+ */
+
+// Global styles for all buttons
+@mixin btn-base {
+  display: block;
+  cursor: pointer;
+  width: auto;
+  margin: $margin;
+  padding: $padding;
+  line-height: 1.4;
+  font-size: $base-font-size;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  position: relative;
+  @include border-radius($border-radius);
+  @include transition(opacity, 0.2s, ease-out);
+  a {
+    display: block;
+    color: $link-color;
+    text-decoration: none !important;
+  }
+  &:hover, &:active {
+    opacity: 0.9;
+    @include transition(opacity, 0.2s, ease-in);
+  }
+  input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0 !important;
+  }
+  &.mw-sml {
+    width: $btn-width;
+  }
+  &.mw-med {
+    width: $btn-width*2;
+  }
+  &.mw-full {
+    width: auto;
+  }
+}
+
+// Create your buttons using this btn-mixer() function
+// Parameters are all optional:
+// $grad:           gradient
+// $border:         border
+// $color:          font color
+// $text-shadow:    text-shadow
+// $box-shadow:     box-shadow
+@mixin btn-mixer($grad: false, $border: false, $color: false, $text-shadow: false, $box-shadow: false) {
+  @include btn-base;
+  @if $grad {
+    @include background($grad);
+  }
+  @if $border {
+    @include border-radius($border);
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $text-shadow {
+    text-shadow: $text-shadow;
+  }
+  @if $box-shadow {
+    @include box-shadow($box-shadow);
+  }
+}
+@mixin btn-green1 {
+  @include btn-mixer($grad-green1, false, $white, false, $box-shadow-inset)
+}
+@mixin btn-green2 {
+  @include btn-mixer(false, $border-green2-shaded, $white, $text-shadow-gray3, $box-shadow);
+  background: $green2;
+  position: relative;
+  min-width: 120px;
+  min-height: 20px;
+  font-size: $h2-size;
+  font-weight: normal;
+}
+.mw-btn-green1 {
+  @include btn-green1;
+}
+.mw-btn-green2 {
+  @include btn-green2;
+}

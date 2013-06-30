@@ -1,0 +1,10 @@
+.ui-panel {
+  background-color: $green1;
+  color: $white;
+  @include opacity(93);
+  .ui-panel-inner {
+    color: white;
+    text-transform: capitalize;
+    padding:10px;
+  }
+}

@@ -1,0 +1,33 @@
+// HEADINGS
+// -----------------------------
+
+/*
+  - heading-mixer: Base for creating header elements
+  - h1: styles for h1 elements
+  - h2: styles for h2 elements
+*/
+
+// Headings mixer
+// @mixin grad-mixer(gradient, color, text-shadow);
+@mixin heading-mixer ($size, $color, $font-weight, $text-shadow) {
+  font-size: $size;
+  color: $color;
+  font-weight: $font-weight;
+  text-shadow: $text-shadow;
+}
+
+@mixin h1 {
+  @include heading-mixer($h1-size, $gray5, normal, $text-shadow-gray3);
+}
+
+@mixin h2 {
+  @include heading-mixer($h2-size, $gray5, normal, $text-shadow-gray3);
+}
+
+.mw-h1 {
+  @include h1;
+}
+
+.mw-h2 {
+  @include h2;
+}

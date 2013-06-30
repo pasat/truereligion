@@ -1,0 +1,42 @@
+// GRADIENTS
+// -----------------------------
+
+/*
+  - grad-base: base bar styles
+  - grad-mixer: helper for bar specific styles
+  - grad-gray2: gradient with the gray2 color
+*/
+
+// Global styles for all gradients
+@mixin grad-base {
+  padding: $padding;
+  font-weight: bold;
+}
+
+// Create your gradients using this grad-mixer() function
+// Parameters:
+// $grad:           gradient (optional)
+// $border:         border (optional)
+// $color:          font color (optional)
+// $text-shadow:    text-shadow (optional)
+@mixin grad-mixer($grad: false, $border: false, $color: false, $text-shadow: false) {
+  @include grad-base;
+  @if $grad {
+    @include background($grad);
+  }
+  @if $border {
+    border: $border;
+  }
+  @if $color {
+    color: $color;
+  }
+  @if $text-shadow {
+    text-shadow: $text-shadow;
+  }
+}
+
+@mixin grad-gray2 {
+  @include grad-mixer($grad-gray2, 0, $gray2, $text-shadow-gray3);
+  border-top: $border-gray2;
+  padding: 0;
+}

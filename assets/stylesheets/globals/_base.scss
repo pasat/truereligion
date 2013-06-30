@@ -1,0 +1,44 @@
+
+// Base
+// -----------------------------
+
+// Global styles applied on every page to help "mobilize"
+
+html {
+  height: 100%;
+}
+
+body {
+  -webkit-text-size-adjust: none;   // stop zoom on rotation
+  background: $body-background-color;
+  color: $text-color;
+  font-family: $font-family;
+  position: relative;
+  min-height: 100%;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  word-wrap: break-word;
+}
+
+// Don't show the highlight of a link when tapped
+a, a:link {
+  -webkit-tap-highlight-color: rgba(225, 244, 204, 0.5);
+}
+
+img {
+  max-width: 100%;
+}
+
+// Don't show type number rotator, its just silly
+input[type="number"]::-webkit-outer-spin-button {
+  display: none;
+}
+* {
+  -webkit-touch-callout: none;
+  @include box-sizing(border-box);
+}
+
+
