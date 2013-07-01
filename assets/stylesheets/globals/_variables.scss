@@ -3,7 +3,8 @@
 
 // Vertical Rhythm
 // ---------------
-// $base-font-size: 13px;
+
+$base-font-size: 16px;
 $base-line-height: 24px;
 @include establish-baseline();
 
@@ -12,16 +13,23 @@ $base-line-height: 24px;
 
 // Color Scheme
 // ------------
+
+
 // Greens
-$green1:                  #00c109;
-$green2:                  #78c158;
-$green3:                  #057400;
-$green4:                  #057a01;
+
+$green:                   #33b876;
+
+$green1:                  darken($green, 10%);
+$green2:                  darken($green, 15%);
+$green3:                  darken($green, 20%);
+$green4:                  darken($green, 25%);
 
 // Blues
-$blue1:                   #3500ED;
+$blue1:                   #005dab;
 $blue2:                   #17338F;
-$blue3:                   #3ca3e0;
+$blue3:                   #4b7bb2;
+
+$blue4:                   #00A0D3;
 
 // White
 $white:                   #FFFFFF;
@@ -37,39 +45,69 @@ $gray4:                   #aaa;
 $gray5:                   #2C2C2C;
 $gray6:                   #CCC;
 $gray7:                   #666;
+$gray8:                   #222;
 
 // Oranges
-$orange1:                 #f36721;
+$orange:                  #f3984c;
+
+$orange1:                 darken($orange, 10%);
+$orange2:                 darken($orange, 15%);
+$orange3:                 darken($orange, 35%);
+
+// Red
+$red1:                    #b10000;
+
+// Yellow
+$yellow:                  #ffe162;
+
+$yellow1:                 darken($yellow, 10%);
+$yellow2:                 darken($yellow, 15%);
+
+
 
 // Typography
 // ----------
-$font-family:             "Helvetica Neue", Helvetica, Verdana;
-$base-font-size:          13px;
-$line-height:             24px;
-$text-color:              $gray5;
-$body-background-color:   $white;
-$link-color:              $blue1;
+
+$font-family:                $helvetica;
+//$base-font-size:           16px;
+//$line-height:              24px;
+$text-color:                 $gray7;
+$body-background-color:      $white;
+$link-color:                 $blue1;
+
+$footer-bottom-font-color:   $gray7;
 
 // Header Sizes
 // ------------
-$h1-size:                 $base-font-size + 9px;
-$h2-size:                 $base-font-size + 6px;
-$h3-size:                 $base-font-size + 3px;
+
+$h1-size:                 $base-font-size + 6px;
+$h2-size:                 $base-font-size + 3px;
+$h3-size:                 $base-font-size + 1px;
 
 // Borders
 // -------
+
 $border-green2:           1px solid $green2;
 $border-green2-shaded:    1px solid shade($green2, 20%);
 $border-gray3:            1px solid $gray3;
+$border-gray7:            1px solid $gray7;
+
+$border-gray8:            1px solid $gray8;
 
 // Gradients
 // ---------
+
 $grad-green1:             linear-gradient($green1 0, $green4 100%);
 $grad-green2:             linear-gradient(lighten($green2, 40%) 0, $green2 100%);
 $grad-gray2:              linear-gradient(lighten($gray2, 40%) 0, $gray2 100%);
 
+$grad-gray2:              linear-gradient(lighten($gray2, 40%) 0, $gray2 100%);
+
+$grad-yellow:            linear-gradient($yellow1, $yellow2);
+
 // Component Sizing
 // ----------------
+
 $padding:                 10px;
 $margin:                  10px;
 $border-radius:           5px;
@@ -78,15 +116,143 @@ $spacing:                 10px;
 
 // Text Shadows
 // ------------
+
 $text-shadow-green2:      2px 1px 1px $green2;
 $text-shadow-gray3:       2px 1px 2px $gray3;
-$text-shadow-black1:      2px 1px 2px $black;
+$text-shadow-black1:      0px 1px 0px rgba($black, 0.15);
 $text-shadow-white:       0 1px $white;
 
 // Box Shadows
 // -----------
-$box-shadow:              0 1px 3px rgba(0,0,0,0.9), 0 -1px 2px rgba(250,250,250,0.8);
+ 
+$box-shadow:              0px 0px 3px rgba(0, 0, 0, 0.10), 0 0px 10px rgba(0, 0, 0, 0.05) inset;
 $box-shadow-inset:        inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 1px rgba(255,255,255,.3);
+$box-shadow-mixed:        0px 0px 2px rgba(0, 0, 0, 0.35), inset 1px 1px 0px rgba(255,255,255,.25);
+$box-shadow-mixed2:        0px 0px 2px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(255,255,255,.15);
+$box-shadow-input:        inset 0px 0px 3px rgba(0,0,0,.15);
 
 
+// Header
+// ------------
 
+$header-top-row-bg:              linear-gradient(#3a3a3a, #323131);
+$logo-text-color:                $white;
+$header-button-bg-color:         #B9D2F3;
+$header-button-border-color:     #374d7f;
+
+/* The Menu button has a "disabled" (collapsed) and "enabled" (expanded) mode.
+ * By default the colors are different. You can customize the color scheme for the "enabled" mode here.
+ * You can also remove it entirely if you don't want it, by commenting out the internal line(s) of this mixin.
+ */
+@mixin menu-button-enabled-bg-image-style($bg-image) {
+  @include background-image(image-url($bg-image), linear-gradient(darken($header-button-bg-color, 0%), darken($header-button-bg-color, 0%)));
+}
+
+
+$header-button-height:           50px;
+$header-button-width:            50px;
+$header-button-border-radius:    0px;
+$header-button-border-width:     0px;
+$header-button-inner-height:     $header-button-height - $header-button-border-width*2;
+$header-button-inner-width:      $header-button-width - $header-button-border-width*2;
+$header-vertical-padding:        0px;
+
+@mixin header-button-bg($bg-image) {
+  @include background(image-url($bg-image), linear-gradient(#354c7e, #374d7f), no-repeat);
+  @include background-size($header-button-inner-width, $header-button-inner-height);
+  @include box-shadow(rgba(white, 0.10) 1px 0px 0px, rgba(white, 0.10) 1px 1px 0px inset);
+  background-position: 5px center;
+}
+
+// Header top row
+
+$header-top-row-inner-height:    $header-button-height + 2*$header-vertical-padding;
+$header-top-row-height:          $header-top-row-inner-height;
+
+// Header colored bar
+
+$colored-bar-height:             0px;
+
+//Sizing
+
+$spacer: 10px;
+
+// Navigation
+// ------------
+
+$nav-separator-bg-color: #273138;
+$nav-separator-font-color: #949db6;
+$nav-separator-gradient-top-color: #273138;
+$nav-separator-gradient-bottom-color: #232d34;
+$nav-button-gradient-top-color: #4b7bb2;
+$nav-button-gradient-bottom-color: #4b7bb2;
+$nav-button-text-color: $white;
+$nav-button-border-color: $black;
+$nav-item-text-color: $gray6;
+$nav-item-border-color: $gray4;
+$nav-item-background-color: transparent;
+$nav-button-collapsed-icon: get-icon("sprites/plus.png");
+/*
+$nav-button-expanded-icon: get-icon("minus.png", $scheme-dark-red);
+$nav-item-link-icon: get-icon("arrow.png", $scheme-dark-red);
+*/
+
+//Sizing & positioning
+
+$nav-vertical-padding: 1.2*$spacer;
+$nav-side-padding: $spacer;
+$nav-inner-height: 32px;
+$nav-height: $nav-inner-height + 2*$nav-vertical-padding;
+
+//Nav separtor
+
+$nav-separator-font-size: 12px;
+$nav-separator-vertical-padding: ($nav-height*3/4 - $nav-separator-font-size)/2;
+
+//Nav button
+
+$nav-button-font-size: 16px;
+
+//Nav item/content
+
+$nav-item-font-size: 15px;
+
+
+$form-bg-color: #fdfdfd;
+$form-bg-color-open: #F4F2EF;
+$search-border-color: #9ea7b8;
+$search-border-color-open: #999;
+$search-bg-color: transparent;
+$search-bg-color-open: #ffffff;
+$search-btn-bg-color: #f7f7f7;
+
+//Search bar
+
+$search-bar-inner-height: 26px;
+$search-bar-vertical-padding: 4px;
+$search-border-size: 0px;
+$search-bar-left-padding: $spacing;
+$search-bar-right-margin: 30px;
+$search-bar-height: $search-bar-inner-height + 2*$search-bar-vertical-padding + 2*$search-border-size;
+$search-bar-border-radius: 3px;
+
+
+// Search form
+
+$form-vertical-padding:          8px;
+$form-side-padding:              10px;
+$form-height:                    $search-bar-height + 2*$form-vertical-padding;
+$form-height-font-size:          14px;
+
+// Overall header variables
+
+$header-height:                  $header-top-row-height + $form-height; 
+
+//Cart
+
+$cart-counter-font-color: $white;
+$cart-counter-bg-color: #f2573e;
+$cart-counter-font-size: 10px;
+$cart-counter-offset: 0px;
+$cart-counter-border-radius: 8px;
+$cart-counter-height: 14px;

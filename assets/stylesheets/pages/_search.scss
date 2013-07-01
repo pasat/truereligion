@@ -1,0 +1,89 @@
+#mw_body {
+	&.mw_search {
+		padding: 0px;
+		background-color: #e9e8e3;
+		
+		#contentWrapper {
+			margin-top: 0px;
+			width: auto;
+			
+			#sideNavigation {
+				float: none;
+				width: auto;
+				display: block;
+				
+				.leftnav {
+					float: none;
+					margin: 0px;
+					width: auto;
+					
+					#sli_facets {
+						display: none;
+					}
+					
+					#list {
+						.main-content {
+							background-color: $white;
+							
+							#merchTopResults {
+								display: block;
+								margin: 0 auto;
+								text-align: center;
+							}
+							#sli_tabs {
+								.sli_tab_container {
+									padding: $padding/2 $padding;
+									
+									.sli_tabs {
+										&>li {
+											font-size: 13px;
+											line-height: 26px;
+										}
+									}
+								}
+							}
+							#grid {
+								width: auto;
+								float: none;
+								background-color: $white;
+								padding: 4px;
+								display: inline-block;
+								
+								.sli_grid_result {
+									width: 150px;
+									height: 345px;
+									margin: 3px;
+									
+									.sli_grid_image {
+										img {
+											width: 150px;
+											height: 191px;
+										}	
+									}
+									
+									.dsc {
+										width: auto;
+										
+										h2 {
+											width: auto;
+											font-size: 15px;
+											line-height: 1.4em;
+											margin-bottom: $margin/2;
+											
+											a {
+												color: #474747;
+											}
+										}
+										.sli_grid_price {
+											font-size: 14px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

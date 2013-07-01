@@ -1,10 +1,16 @@
 .ui-panel {
-  background-color: $green1;
-  color: $white;
-  @include opacity(93);
+	font-size: $base-font-size;
   .ui-panel-inner {
     color: white;
     text-transform: capitalize;
-    padding:10px;
+    padding: 7px 10px;
   }
+}
+
+.ui-panel-content-wrap {
+	font-size: $base-font-size;
+	.ui-content {
+		padding: 0px;
+		overflow: visible;
+	}
 }

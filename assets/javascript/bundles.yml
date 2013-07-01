@@ -4,7 +4,7 @@
   :input_files:
   - host_map.js
   - vendor/jquery-1.9.1.min.js
-  - http://d1topzp4nao5hp.cloudfront.net/uranium-upload/0.1.128/uranium.js
+  - http://d1topzp4nao5hp.cloudfront.net/uranium-upload/0.1.104/uranium-pretty.js
   - http://d1topzp4nao5hp.cloudfront.net/plutonium-upload/0.1.82/moovweb.js
   - http://d1topzp4nao5hp.cloudfront.net/plutonium-upload/0.1.82/gsub.js
   - http://d1topzp4nao5hp.cloudfront.net/plutonium-upload/0.1.82/passthrough_ajax.js
@@ -19,4 +19,3 @@
   - vendor/bootstrap.custom.js
   - vendor/iscroll.js
   - vendor/modernizr.js
-

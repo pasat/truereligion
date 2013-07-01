@@ -109,7 +109,7 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 
 /* panel */
 .ui-panel {
-	width: 17em;
+	width: 16.5em;
 	min-height: 100%;
 	max-height: none;
 	border-width: 0;
@@ -189,15 +189,15 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 /* positioning: panel */
 /* panel left  */
 .ui-panel-position-left {
-	left: -17em;
+	left: -16.5em;
 }
 /* animated: panel left (for overlay and push) */
 .ui-panel-animate.ui-panel-position-left.ui-panel-display-overlay,
 .ui-panel-animate.ui-panel-position-left.ui-panel-display-push {
 	left: 0;
-	-webkit-transform: translate3d(-17em,0,0);
-	-moz-transform: translate3d(-17em,0,0);
-	transform: translate3d(-17em,0,0);
+	-webkit-transform: translate3d(-16.5em,0,0);
+	-moz-transform: translate3d(-16.5em,0,0);
+	transform: translate3d(-16.5em,0,0);
 }
 /* panel left open */
 .ui-panel-position-left.ui-panel-display-reveal, /* negate "panel left" for reveal */
@@ -213,15 +213,15 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 }
 /* panel right */
 .ui-panel-position-right {
-	right: -17em;
+	right: -16.5em;
 }
 /* animated: panel right (for overlay and push) */
 .ui-panel-animate.ui-panel-position-right.ui-panel-display-overlay,
 .ui-panel-animate.ui-panel-position-right.ui-panel-display-push {
 	right: 0;
-	-webkit-transform: translate3d(17em,0,0);
-	-moz-transform: translate3d(17em,0,0);
-	transform: translate3d(17em,0,0);
+	-webkit-transform: translate3d(16.5em,0,0);
+	-moz-transform: translate3d(16.5em,0,0);
+	transform: translate3d(16.5em,0,0);
 }
 /* panel right open */
 .ui-panel-position-right.ui-panel-display-reveal,  /* negate "panel right" for reveal */
@@ -241,8 +241,8 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open,
 .ui-panel-content-wrap-position-left.ui-panel-content-wrap-open,
 .ui-panel-dismiss-position-left.ui-panel-dismiss-open {
-	left: 17em;
-	right: -17em;
+	left: 16.5em;
+	right: -16.5em;
 }
 /* animated: panel left open (for reveal and push) */
 .ui-panel-animate.ui-panel-content-fixed-toolbar-position-left.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-reveal,
@@ -251,16 +251,16 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-panel-animate.ui-panel-content-wrap-position-left.ui-panel-content-wrap-open.ui-panel-content-wrap-display-push {
 	left: 0;
 	right: 0;
-	-webkit-transform: translate3d(17em,0,0);
-	-moz-transform: translate3d(17em,0,0);
-	transform: translate3d(17em,0,0);
+	-webkit-transform: translate3d(16.5em,0,0);
+	-moz-transform: translate3d(16.5em,0,0);
+	transform: translate3d(16.5em,0,0);
 }
 /* panel right open */
 .ui-panel-content-fixed-toolbar-position-right.ui-panel-content-fixed-toolbar-open,
 .ui-panel-content-wrap-position-right.ui-panel-content-wrap-open,
 .ui-panel-dismiss-position-right.ui-panel-dismiss-open {
-	left: -17em;
-	right: 17em;
+	left: -16.5em;
+	right: 16.5em;
 }
 /* animated: panel right open (for reveal and push) */
 .ui-panel-animate.ui-panel-content-fixed-toolbar-position-right.ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-reveal,
@@ -269,9 +269,9 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 .ui-panel-animate.ui-panel-content-wrap-position-right.ui-panel-content-wrap-open.ui-panel-content-wrap-display-push {
 	left: 0;
 	right: 0;
-	-webkit-transform: translate3d(-17em,0,0);
-	-moz-transform: translate3d(-17em,0,0);
-	transform: translate3d(-17em,0,0);
+	-webkit-transform: translate3d(-16.5em,0,0);
+	-moz-transform: translate3d(-16.5em,0,0);
+	transform: translate3d(-16.5em,0,0);
 }
 /* negate "panel left/right open" for overlay */
 .ui-panel-content-fixed-toolbar-open.ui-panel-content-fixed-toolbar-display-overlay,
@@ -326,13 +326,13 @@ div.ui-mobile-viewport { overflow-x: hidden; }
 	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-left,
 	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-left,
 	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-left {
-		margin-right: 17em;
+		margin-right: 16.5em;
 	}
 	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-right,
 	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-right,
 	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-right,
 	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-right {
-		margin-left: 17em;
+		margin-left: 16.5em;
 	}
 	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push,
 	.ui-responsive-panel.ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal {

@@ -17,7 +17,7 @@ match(inferred_content_type()) {
 
       # Coming Soon...
       # Comment out the line below once you begin working
-      @import "coming_soon.ts"
+      # @import "coming_soon.ts"
 
       
 

@@ -1,4 +1,8 @@
-# Place holder/example file
 $("./body") {
-  add_class("mw-home")
+	$("./div[@id='mw_body']") {
+		add_class("mw_home")
+		attribute("data-role","content")
+		
+		move_here("//div[@id='contentWrapper']")
+	}
 }

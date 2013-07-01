@@ -6,6 +6,8 @@
 
 html {
   height: 100%;
+  width: auto !important;
+  transform: none !important;
 }
 
 body {
@@ -40,5 +42,3 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-touch-callout: none;
   @include box-sizing(border-box);
 }
-
-

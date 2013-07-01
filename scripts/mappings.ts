@@ -17,15 +17,39 @@ match($status) {
   with(/200/) {
     log("--> STATUS: 200")
 
-    match($path) {
-      with(/^\/$|^\/\?/) {
-        log("--> Importing pages/home.ts in mappings.ts")
-        @import pages/home.ts
-      }
-      else() {
-        log("--> No page match in mappings.ts")
-      }
-    }
+     match($host){
+			with(/jeans\.truereligionbrandjeans\.com/){
+		
+		   match($path) {
+		
+		     with(/search/) {
+		       log("--> Importing pages/search.ts in mappings.ts")
+		       @import pages/search.ts
+		       @import sections/nav.ts
+		       @import sections/header.ts
+		     }
+		     
+		     else() {
+		       log("--> No page match in mappings.ts")
+		     }
+		   }
+		 }
+		 
+		 with(/truereligionbrandjeans\.com/){
+		
+			 match($path) {
+				  with(/index|^\/$/) {
+				    log("--> Importing pages/home.ts in mappings.ts")
+				    @import sections/header.ts
+				    @import pages/home.ts
+				  }
+				  
+				  else() {
+				    log("--> No page match in mappings.ts")
+				  }
+				}
+			}
+		}
   }
 
   else() {
@@ -33,5 +57,4 @@ match($status) {
     log("--> STATUS: " + $status + " assuming its an error code pages/error.ts")
     @import pages/error.ts
   }
-
 }
