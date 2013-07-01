@@ -1,7 +1,8 @@
 #mw_body {
 	&.mw_search {
 		padding: 0px;
-		background-color: #e9e8e3;
+		/* background-color: #e9e8e3; */
+		background-color: $white;
 		
 		#contentWrapper {
 			margin-top: 0px;

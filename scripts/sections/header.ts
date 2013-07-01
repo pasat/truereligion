@@ -32,6 +32,8 @@ $('./body') {
     move_here("//div[@id='searchContainer']") {
 			attribute("class","mw_search_bar")
 			
+			
+			## Search Page
 			$("./form") {
 				move_here(".//input[@id='searchSubmit']","top") {
 					add_class("mw_search_btn")
@@ -44,6 +46,19 @@ $('./body') {
 				wrap("div") {
 					add_class("mw_search_field_container")
 				}
+			}
+			
+			## Home Page
+			$("./input[@id='searchfield']") {
+				add_class("mw_search_field")
+				
+				wrap("div") {
+					add_class("mw_search_field_container")
+				}
+			}
+			$("./a[@id='searchSubmit']") {
+				add_class("mw_search_btn")
+				move_to("//div[@id='searchContainer']","top")
 			}
     }
   }

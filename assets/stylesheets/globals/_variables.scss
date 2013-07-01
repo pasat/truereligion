@@ -110,7 +110,7 @@ $grad-yellow:            linear-gradient($yellow1, $yellow2);
 
 $padding:                 10px;
 $margin:                  10px;
-$border-radius:           5px;
+$border-radius:           0px;
 $btn-width:               100px;
 $spacing:                 10px;
 
@@ -120,7 +120,7 @@ $spacing:                 10px;
 $text-shadow-green2:      2px 1px 1px $green2;
 $text-shadow-gray3:       2px 1px 2px $gray3;
 $text-shadow-black1:      0px 1px 0px rgba($black, 0.15);
-$text-shadow-white:       0 1px $white;
+$text-shadow-white:       0 1px rgba($white, 0.55);
 
 // Box Shadows
 // -----------
@@ -160,7 +160,7 @@ $header-vertical-padding:        0px;
 @mixin header-button-bg($bg-image) {
   @include background(image-url($bg-image), linear-gradient(#354c7e, #374d7f), no-repeat);
   @include background-size($header-button-inner-width, $header-button-inner-height);
-  @include box-shadow(rgba(white, 0.10) 1px 0px 0px, rgba(white, 0.10) 1px 1px 0px inset);
+  @include box-shadow(rgba(white, 0.0) 1px 0px 0px, rgba(white, 0.0) 1px 1px 0px inset);
   background-position: 5px center;
 }
 
@@ -171,7 +171,7 @@ $header-top-row-height:          $header-top-row-inner-height;
 
 // Header colored bar
 
-$colored-bar-height:             0px;
+$colored-bar-height:             4px;
 
 //Sizing
 
@@ -186,7 +186,7 @@ $nav-separator-gradient-top-color: #273138;
 $nav-separator-gradient-bottom-color: #232d34;
 $nav-button-gradient-top-color: #4b7bb2;
 $nav-button-gradient-bottom-color: #4b7bb2;
-$nav-button-text-color: $white;
+$nav-button-text-color: #4E4D46;
 $nav-button-border-color: $black;
 $nav-item-text-color: $gray6;
 $nav-item-border-color: $gray4;
@@ -223,8 +223,8 @@ $form-bg-color-open: #F4F2EF;
 $search-border-color: #9ea7b8;
 $search-border-color-open: #999;
 $search-bg-color: transparent;
-$search-bg-color-open: #ffffff;
-$search-btn-bg-color: #f7f7f7;
+$search-bg-color-open: $white;
+$search-btn-bg-color: #FDFDFD;
 
 //Search bar
 

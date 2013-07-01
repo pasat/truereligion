@@ -1,5 +1,101 @@
-// Every page should have a class on the body
-// Scope that in each file at the start
-.mw-home {
-
+#mw_body {
+	&.mw_home {
+		padding: 0px;
+		width: 306px;
+		margin: 0 auto;
+		
+		#contentWrapper {
+			margin-top: 0px;
+			width: auto;
+			
+			#defaultpage_div {
+				float: none;
+				width: auto;
+				display: block;
+				
+				#primary-content {
+					margin-top: $margin/2;
+					
+					#masonry-grid {
+						.masonry-box {
+							margin-bottom: 6px;
+							position: relative;
+						}
+					}
+				}
+				
+				#box1 {
+					width: 310px; 
+					height: 205px; 
+					background: url('/images/home/boxes/TRUE-1540/box1.jpg') no-repeat; 
+					@include background-size(310px 205px);
+					cursor: pointer;
+				}
+				
+				#box2 {
+					width: 150px; 
+					height: 150px; 
+					background: url('/images/home/boxes/TRUE-1161/box2.jpg') no-repeat;
+					@include background-size(150px 150px);
+				}
+				
+				#box3 {
+					width: 150px; 
+					height: 306px; 
+					background: url('/images/home/boxes/TRUE-1478/box3.jpg') no-repeat;
+					@include background-size(150px 306px);
+				}
+				
+				#box4 {
+					width: 310px; 
+					height: 310px; 
+					background: url('/images/home/boxes/TRUE-1478/box4.jpg') no-repeat;
+					@include background-size(310px 310px);
+				}
+				
+				#box5 {
+					width: 150px; 
+					height: 306px; 
+					background: url('/images/home/boxes/TRUE-1478/box5.jpg') no-repeat;
+					@include background-size(150px 306px);
+				}
+				
+				#box6 {
+					width: 150px; 
+					height: 150px; 
+					background: url('/images/home/boxes/TRUE-1478/box6.jpg') no-repeat;
+					@include background-size(150px 150px);
+				}
+				
+				#box7 {
+					width: 150px; 
+					height: 150px; 
+					background: url('/images/home/boxes/TRUE-1161/box7.jpg') no-repeat;
+					@include background-size(150px 150px);
+				}
+				
+				#box8 {
+					width: 310px; 
+					height: 310px; 
+					background: url('/images/home/boxes/TRUE-1478/box8.jpg') no-repeat;
+					@include background-size(310px 310px);
+				}
+				
+				#box9 {
+					width: 150px; 
+					height: 306px; 
+					background: url('/images/home/boxes/TRUE-1478/box9.jpg') no-repeat;
+					@include background-size(150px 306px);
+				}
+				
+				#box10 {
+					width: 150px; 
+					height: 150px; 
+					background: url('/images/home/boxes/TRUE-1478/box10.jpg') no-repeat;
+					@include background-size(150px 150px);
+				}
+			}
+		}
+	}
 }
+

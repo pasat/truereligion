@@ -40,8 +40,8 @@ match($status) {
 			 match($path) {
 				  with(/index|^\/$/) {
 				    log("--> Importing pages/home.ts in mappings.ts")
-				    @import sections/header.ts
 				    @import pages/home.ts
+				    @import sections/header.ts
 				  }
 				  
 				  else() {

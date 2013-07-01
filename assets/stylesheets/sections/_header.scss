@@ -10,14 +10,14 @@
   
   .mw_colored_bar {
     height: $colored-bar-height;
-    @include background(linear-gradient(#0b3e91, lighten(#0b3e91, 2%)));
+    @include background(linear-gradient(#f7705c, lighten(#f7705c, 2%)));
   }
   
   #mw_header_top_row {
     height: $header-top-row-inner-height;
     @include background($header-top-row-bg);
     border-bottom: 1px solid $black;
-    @include box-shadow(rgba(white, 0.15) 0px -1px 0px, rgba(white, 0.10) 0px 1px 0px inset);
+    @include box-shadow(rgba(white, 0.0) 0px -1px 0px, rgba(white, 0.0) 0px 1px 0px inset);
     
     #mw_site_logo {
       margin-left: auto;
@@ -120,81 +120,82 @@
   div.mw_search_bar {
     clear: both;
     border-bottom: 1px solid $gray8;
+    padding: $form-vertical-padding $form-side-padding;
+    background-color: $form-bg-color;
     
     &.mw_border {
 	    border-bottom: 1px solid #666;
     }
     
-    form {
-      padding: $form-vertical-padding $form-side-padding;
-      background-color: $form-bg-color;
-      border-bottom: 1px solid #fff;
+    input {
+      margin: 0;
+      padding: 0;
+      border: none;
+      -webkit-appearance: none;
+    }
+    div.mw_search_field_container {
+      border: $search-border-size solid $search-border-color;
+      border-right: none;
+      padding: $search-bar-vertical-padding 0 $search-bar-vertical-padding $search-bar-left-padding;
+      margin-right: $search-bar-right-margin;
+      height: auto;
+      line-height: $search-bar-inner-height;
+      background-color: $search-bg-color;
+      border-top-left-radius: $search-bar-border-radius;
+      border-bottom-left-radius: $search-bar-border-radius;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; 
+      position: relative;
       
-      input {
-        margin: 0;
-        padding: 0;
-        border: none;
-        -webkit-appearance: none;
+      &:after {
+        content:"";
+        position: absolute;
+        top: 6px;
+        left: 8px;
+        @include sprites-search;
       }
-      div.mw_search_field_container {
-        border: $search-border-size solid $search-border-color;
-        border-right: none;
-        padding: $search-bar-vertical-padding 0 $search-bar-vertical-padding $search-bar-left-padding;
-        margin-right: $search-bar-right-margin;
-        height: auto;
-        line-height: $search-bar-inner-height;
-        background-color: $search-bg-color;
-        border-top-left-radius: $search-bar-border-radius;
-        border-bottom-left-radius: $search-bar-border-radius;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0; 
-        position: relative;
+      
+      input[type='text'].mw_search_field {
+        height: $search-bar-inner-height;
+        width: 98%;
+        background-color: transparent;
+        background-image: none;
+        @include box-shadow(rgba(white, 0.0) 0px 0px 0px);
+        font-size: $form-height-font-size;
+        font-weight: normal;
+        border: none !important;
+        border-left: 1px solid #b5b5b3 !important;
+        color: #999;
+        margin-left: 30px;
+        border-radius: 0px;
+        padding-left: $padding*1.5;
         
-        &:after {
-          content:"";
-          position: absolute;
-          top: 6px;
-          left: 8px;
-          @include sprites-search;
-        }
-        
-        input[type='text'].mw_search_field {
-          height: $search-bar-inner-height;
-          width: 98%;
-          background-color: transparent;
-          background-image: none;
-          @include box-shadow(rgba(white, 0.0) 0px 0px 0px);
-          font-size: $form-height-font-size;
-          font-weight: normal;
-          border: none; 
-          border-left: 1px solid #333;
-          color: #999;
-          margin-left: 30px;
-          border-radius: 0px;
-          padding-left: $padding;
-          
-          &:focus, &:active {
-            border: none;
-            outline: none;
-          }
+        &:focus, &:active {
+          border: none;
+          outline: none;
         }
       }
-      input.mw_search_btn {
-        height: $search-bar-height; //CAUTION: input[type='submit'] counts its borders as part of its height property!!!
-        float: right;
-        width: $search-bar-right-margin;
-        //NOTE: The background image must come before the linear gradient even though we're using the multiple-backgrounds syntax, or it won't show
-       /*  @include background(image-url($search-btn-bg-image) no-repeat 0 center); */
-        background-color: $search-btn-bg-color;
-        border-top: $search-border-size solid $search-border-color;
-        border-bottom: $search-border-size solid $search-border-color;
-        border-right: $search-border-size solid $search-border-color;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border-top-right-radius: $search-bar-border-radius;
-        border-bottom-right-radius: $search-bar-border-radius;
-        text-indent: -9999px;
-      }
+    }
+    input.mw_search_btn,
+    a.mw_search_btn {
+      height: $search-bar-height; //CAUTION: input[type='submit'] counts its borders as part of its height property!!!
+      float: right;
+      width: $search-bar-right-margin;
+      //NOTE: The background image must come before the linear gradient even though we're using the multiple-backgrounds syntax, or it won't show
+     /*  @include background(image-url($search-btn-bg-image) no-repeat 0 center); */
+      background-color: $search-btn-bg-color;
+      border-top: $search-border-size solid $search-border-color;
+      border-bottom: $search-border-size solid $search-border-color;
+      border-right: $search-border-size solid $search-border-color;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: $search-bar-border-radius;
+      border-bottom-right-radius: $search-bar-border-radius;
+      text-indent: -9999px;
+    }
+    
+    a.mw_search_btn {
+      display: none;
     }
   }
   div.mw_search_bar[data-ur-state="disabled"] {
@@ -242,7 +243,7 @@
       padding: $padding/2 0px $padding/2 0px;
 		  /* @include background(linear-gradient($nav-button-gradient-top-color, $nav-button-gradient-bottom-color)); */
 		  border-bottom: 1px solid rgba(black, 0.10);
-		  border-top: 1px solid rgba(white, 0.05);
+		  border-top: 1px solid rgba(white, 0.35);
 		  font-weight: bold;
 		  font-size: $nav-button-font-size;
 		  line-height: $nav-inner-height;
@@ -256,6 +257,7 @@
         text-transform: uppercase;
         color: #4e4d46;
         padding-left: $padding*3;
+        text-shadow: $text-shadow-white;
         
         &:after {
 	        content:"";
@@ -284,7 +286,7 @@
 		        right: 8px;
 		        width: 30px !important;
 		        height: 21px;
-		       /*  @include sprites-minus; */
+		        @include sprites-minus;
 		        border-left: 0px dotted rgba($black, 0.35);     
 	        }
         }
@@ -301,7 +303,6 @@
       margin: 0;
       border: none;
       padding: 0px 0px;
-      background-color: #273138;
       
       .mw_nav_sub_content {
         list-style-type: none;
@@ -310,32 +311,18 @@
         margin: 0px 0px;
         
         .mw_nav_sub_btn {
-	        padding: $padding*0.9 0px $padding*0.9 $padding*1.8;
+	        padding: $padding*0.9 0px $padding*0.9 $padding*3;
 				  border-bottom: 1px solid rgba(black, 0.50);
 				  border-top: 1px solid rgba(white, 0.05);
 				  font-weight: bold;
 				  font-size: $nav-button-font-size;
 				  color: $nav-button-text-color;
 				  position: relative;
-				  background-color: #323c43;
-				  
-				  &:after {
-					  content:"";
-					  position: absolute;
-					  top: 0;
-					  left: 0;
-					  width: 5px;
-					  height: 98%;
-					  background-color: #ed705e;
-					  display: block;
-					  z-index: 100;
-				  }
 				  
 				  .mw_nav_sub_btn_inner {
 					  position: relative;
 		        display: block;
 		        text-transform: capitalize;
-		        color: #E9E8E3;
 		        line-height: 1.5em;
 		        
 		        &:after {

@@ -1,3 +1,143 @@
-footer.mw-footer {
-
+#mw_footer {
+  border-top: 1px solid $gray6;
+  
+  ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #mw_footer_accordions_container {
+    #mw_footer_accordions {
+      .mw_nav_item {
+        border-bottom: 1px solid $gray7;
+        color: $gray7;
+        background-color: $white;         
+        
+        &:first-child {
+          border-top: 1px solid $gray7;
+        }
+        .mw_nav_btn {
+          padding: $padding;
+          font-weight: bold;
+          cursor: pointer;
+          
+          .mw_nav_btn_inner {
+            /*
+						@include background(image-url($footer-button-icon-disabled) right 50% no-repeat); 
+            @include background-size($footer-line-height $footer-line-height);
+						*/
+          }
+          &[data-ur-state='enabled'] {
+            .mw_nav_btn_inner {
+               /* @include background-image(image-url($footer-button-icon-enabled));  */
+            }
+          }
+        }
+        .mw_nav_content {
+          .mw_nav_sub_content {
+            a {
+              text-decoration: none;
+              font-weight: normal;
+              display: block;
+              padding: $padding;
+              color: $gray7;
+              .mw_nav_sub_content_inner {
+                // Nothing to see here! :D
+              }
+              &:visited, &:hover, &:active {
+                text-decoration: none;
+                color: $gray7;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  #mw_footer_bottom {
+    @include font-size(13px);
+    color: $footer-bottom-font-color;
+    background-color: $gray1;
+    padding-left: $padding*2;
+    padding-right: $padding*2;
+    text-align: center;
+    
+    #emailSignUp {
+	    #emailSignUpContent {
+		    width: 242px;
+		    margin: 0 auto;
+		    
+		    h2 {
+			    font-weight: bold;
+		    }
+		    .signInText {
+			    line-height: 1.54em;
+			    margin-bottom: $margin*2;
+		    }
+		    #mailingListInput {
+			    display: inline-block;
+			    width: 160px;
+			    font-size: 13px;
+			    margin: 0px $margin/2;
+			    padding: 0px $padding !important;
+			    line-height: 28px;
+			    height: 28px;
+			    float: left;
+		    }
+		    #submitEmail {
+			    display: inline-block;
+			    float: left;
+			    
+			    .btnSubmitMail {
+				    background-color: $black;
+				    color: $white;
+				    padding: 0px $padding;
+				    line-height: 28px;
+				    height: 28px;
+				    text-transform: uppercase;
+				    font-weight: bold;
+				    display: inline-block;
+			    }
+		    }
+	    }
+    }
+    
+    #mw_footer_copyright {
+	    text-align: center;
+	    padding-top: $padding*3;
+	    color: $footer-bottom-font-color;
+	    clear: both;
+    }
+    .social-icons {
+	    display: block;
+	    float: none;
+	    clear: both;
+	    width: 300px;
+	    margin: 0 auto;
+	    
+	    display: inline-block;
+	    float: none;
+	    margin: $margin*1.5 auto;
+	    width: 177px;
+    }
+    #mw_moovweb_callout {
+	    text-align: center;
+	    margin-left: auto;
+      margin-right: auto;
+      padding-top: $padding/2;
+      padding-bottom: $padding*3;
+      clear: both;
+	 
+      #mw_moovweb_callout_content {
+	      color: $footer-bottom-font-color;
+	      
+        #mw_moovweb_logo {
+          height: 14px;
+          margin: 0px 4px -2px;
+        }
+      }
+    }
+  }
 }

@@ -20,23 +20,29 @@
 
 input[type="text"], input[type="tel"], input[type="email"], .mw-input {
   display: block;
-  padding: 7px;
-  border: none;
-  color: $gray7;
-  font-size: 13px;
+  padding: 7px 7px !important;
+  border: $border-gray7 !important;
+  color: $gray8;
+  font-size: 16px;
   text-shadow: $text-shadow-white;
-  font-weight: bold;
+  font-weight: normal;
+  font-family: $arial;
+  height: 38px;
+  line-height: 1em;
+  width: 100%;
   @include appearance(none);
-  @include box-shadow($box-shadow-inset);
+  @include box-shadow($box-shadow-input);
   @include border-radius($border-radius);
-  @include background(linear-gradient(top, #eee 0%, #fff 100%));
+  @include box-sizing(border-box);
+  background-color: $white;
   @include transition(all, 1s, ease-in);
+  
   &:focus {
     color: $black;
     outline: none;
     @include transition(all, 1s, ease-in);
-    @include background(linear-gradient(top, #fff 0%, #eee 100%));
     @include box-shadow($box-shadow-inset, 0 0 3px 2px #fff);
+    @include box-shadow($box-shadow-input);
   }
   &::-webkit-input-placeholder {
      color: #999;
@@ -44,4 +50,34 @@ input[type="text"], input[type="tel"], input[type="email"], .mw-input {
   &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
     display: none;
   }
+}
+
+input[type="checkbox"] {
+	border: $border-gray7 !important;
+}
+
+input[type="password"] {
+  display: block;
+  padding: 7px 7px !important;
+  border: $border-gray7 !important;
+  color: $gray8;
+  font-size: 14px;
+  text-shadow: $text-shadow-white;
+  font-weight: normal;
+  font-family: $arial;
+  height: 36px;
+  line-height: 1em;
+  @include appearance(none);
+  @include box-shadow($box-shadow-input);
+  @include border-radius($border-radius);
+  @include box-sizing(border-box);
+  background-color: $gray2;
+  @include transition(all, 1s, ease-in);
+}
+
+select {
+	border: $border-gray7 !important;
+	padding-left: $padding*1.5;
+	font-size: 14px;
+	width: 100%;
 }
