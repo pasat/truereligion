@@ -44,6 +44,12 @@ match($status) {
 				    @import sections/header.ts
 				  }
 				  
+				  with(/store\/productdetails/) {
+				    log("--> Importing pages/product.ts in mappings.ts")
+				    @import pages/product.ts
+				    @import sections/header.ts
+				  }
+				  
 				  else() {
 				    log("--> No page match in mappings.ts")
 				  }

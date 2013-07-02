@@ -13,6 +13,7 @@ html {
 body {
   -webkit-text-size-adjust: none;   // stop zoom on rotation
   background: $body-background-color;
+  background-image: none !important;
   color: $text-color;
   font-family: $font-family;
   position: relative;

@@ -3,6 +3,10 @@
 $("/html") {
   rewrite_links()
   absolutize_srcs()
+  
+  $("./head") {
+    insert("link", rel: "stylesheet", type: "text/css", href: "http://fonts.googleapis.com/css?family=Francois+One")
+	}
 
   # Add the mobile meta tags
   clean_mobile_meta_tags()

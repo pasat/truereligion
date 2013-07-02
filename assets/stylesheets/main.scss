@@ -28,13 +28,13 @@
 @import "globals/vendor/jquery.mobile.custom.structure";
 @import "globals/vendor/jquery.mobile.panel";
 
+// Spracker will auto-generate this file for you. MAGIC!
+@import "globals/_sprites";
+
 // File for global Uranium stylings
 // Uranium is a mobile javascript widget library
 // learn more => http://uraniumjs.com/
 @import "globals/_uranium";
-
-// Spracker will auto-generate this file for you. MAGIC!
-@import "globals/_sprites";
 
 // Import Library of mixins and classes
 @import "globals/_lib";
@@ -50,3 +50,4 @@
 // Pages
 @import "pages/_home";
 @import "pages/_search";
+@import "pages/_product";

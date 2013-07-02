@@ -13,17 +13,21 @@
   display: block;
   cursor: pointer;
   width: auto;
-  margin: $margin;
-  padding: $padding;
+  height: auto;
+  margin: $margin auto;
+  padding: $padding 2*$padding;
   line-height: 1.4;
+  font-family: $arial;
   font-size: $base-font-size;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  border: none;
+  text-transform: uppercase;
   position: relative;
   @include border-radius($border-radius);
   @include transition(opacity, 0.2s, ease-out);
+  text-indent: 0px;
+  
   a {
     display: block;
     color: $link-color;
@@ -59,13 +63,14 @@
 // $color:          font color
 // $text-shadow:    text-shadow
 // $box-shadow:     box-shadow
-@mixin btn-mixer($grad: false, $border: false, $color: false, $text-shadow: false, $box-shadow: false) {
+
+@mixin btn-mixer($grad: false, $border: false, $color: false, $text-shadow: false, $box-shadow: false, $border-radius: false ) {
   @include btn-base;
   @if $grad {
     @include background($grad);
   }
   @if $border {
-    @include border-radius($border);
+		border: $border;
   }
   @if $color {
     color: $color;
@@ -76,22 +81,28 @@
   @if $box-shadow {
     @include box-shadow($box-shadow);
   }
+  @if $border-radius {
+    @include border-radius($border-radius);
+  }
 }
-@mixin btn-green1 {
-  @include btn-mixer($grad-green1, false, $white, false, $box-shadow-inset)
-}
-@mixin btn-green2 {
-  @include btn-mixer(false, $border-green2-shaded, $white, $text-shadow-gray3, $box-shadow);
-  background: $green2;
+
+@mixin btn-gray {
+  @include btn-mixer(false, $border-gray7, $gray8, false, $box-shadow-mixed, false);
+  background: $gray2;
   position: relative;
-  min-width: 120px;
-  min-height: 20px;
-  font-size: $h2-size;
+  font-size: 17px;
   font-weight: normal;
 }
-.mw-btn-green1 {
-  @include btn-green1;
+@mixin btn-black {
+  @include btn-mixer(false, $border-gray8, $white, false, $box-shadow-mixed, false);
+  background: $black;
+  position: relative;
+  font-size: 17px;
+  font-weight: normal;
 }
-.mw-btn-green2 {
-  @include btn-green2;
+.mw-btn-yellow {
+  @include btn-gray;
+}
+.mw-btn-black {
+  @include btn-black;
 }
