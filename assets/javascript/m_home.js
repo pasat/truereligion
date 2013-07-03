@@ -50,6 +50,7 @@
         home.shiftBoxes = function () {
             if (($(window).width() < 1280) && boxShift == 0) {
                 $("#box4").insertAfter($("#box6"));
+                $("#box8").insertAfter($("#box4"));
                 boxShift = 1;
                 $('#masonry-grid').masonry('reload');
             } else if (($(window).width() > 1280) && boxShift == 1) {

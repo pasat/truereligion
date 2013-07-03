@@ -107,7 +107,15 @@
   font-size: 17px;
   font-weight: normal;
 }
-.mw-btn-yellow {
+@mixin btn-yellow {
+  @include btn-mixer($grad-yellow2, $border-black, #623700, $text-shadow-white, $box-shadow-mixed, false);
+  position: relative;
+  font-size: 17px;
+  font-weight: normal;
+
+}
+
+.mw-btn-gray {
   @include btn-gray;
 }
 .mw-btn-black {
@@ -116,3 +124,7 @@
 .mw-btn-red {
   @include btn-red;
 }
+.mw-btn-yellow {
+  @include btn-yellow;
+}
+

@@ -65,6 +65,9 @@ $yellow:                  #ffe162;
 $yellow1:                 darken($yellow, 10%);
 $yellow2:                 darken($yellow, 15%);
 
+$yellow3:                 #ffe162;
+$yellow4:                 #ffd654;
+$yellow5:                 #fbd051;
 
 
 // Typography
@@ -95,6 +98,7 @@ $border-gray3:            1px solid $gray3;
 $border-gray7:            1px solid $gray7;
 
 $border-gray8:            1px solid $gray8;
+$border-black:            1px solid $black;
 $border-red1:             1px solid $red1;
 
 // Gradients
@@ -106,7 +110,8 @@ $grad-gray2:              linear-gradient(lighten($gray2, 40%) 0, $gray2 100%);
 
 $grad-gray2:              linear-gradient(lighten($gray2, 40%) 0, $gray2 100%);
 
-$grad-yellow:            linear-gradient($yellow1, $yellow2);
+$grad-yellow:             linear-gradient($yellow1, $yellow2);
+$grad-yellow2:            linear-gradient($yellow3, $yellow4 50%, $yellow5 50%, $yellow5);
 
 // Component Sizing
 // ----------------
