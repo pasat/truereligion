@@ -56,6 +56,12 @@ match($status) {
 				    @import sections/header.ts
 				  }
 				  
+				  with(/store\/storelocator/) {
+				    log("--> Importing pages/storelocator.ts in mappings.ts")
+				    @import pages/storelocator.ts
+				    @import sections/header.ts
+				  }
+				  
 				  else() {
 				    log("--> No page match in mappings.ts")
 				  }
