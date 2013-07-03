@@ -55,7 +55,9 @@ $orange2:                 darken($orange, 15%);
 $orange3:                 darken($orange, 35%);
 
 // Red
-$red1:                    #b10000;
+$red:                     #aa0000;
+
+$red1:                    darken($red, 10%);
 
 // Yellow
 $yellow:                  #ffe162;
@@ -93,6 +95,7 @@ $border-gray3:            1px solid $gray3;
 $border-gray7:            1px solid $gray7;
 
 $border-gray8:            1px solid $gray8;
+$border-red1:             1px solid $red1;
 
 // Gradients
 // ---------

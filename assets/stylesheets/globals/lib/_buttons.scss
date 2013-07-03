@@ -100,9 +100,19 @@
   font-size: 17px;
   font-weight: normal;
 }
+@mixin btn-red {
+  @include btn-mixer(false, $border-red1, $white, false, $box-shadow-mixed, false);
+  background: $red;
+  position: relative;
+  font-size: 17px;
+  font-weight: normal;
+}
 .mw-btn-yellow {
   @include btn-gray;
 }
 .mw-btn-black {
   @include btn-black;
+}
+.mw-btn-red {
+  @include btn-red;
 }

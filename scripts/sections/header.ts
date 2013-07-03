@@ -14,7 +14,7 @@ $('./body') {
         insert_menu_button(%menu_uranium_id)
       }
       insert_header_buttons("right") {
-        %cart_counter_text = strip_non_digits(fetch(xpath_from_body("li[@class='CartLink']/a/span/text()"))) # CHANGE THIS
+        %cart_counter_text = strip_non_digits(fetch(xpath_from_body("div[@id='cart-info']/a/span[@class='cartCount']/text()"))) # CHANGE THIS
         insert_cart_button_with_counter("cart.php", %cart_counter_text) # CHANGE THIS
       }
       grab_site_logo("/html/body//a[@id='mainLogo']") # CHANGE THIS

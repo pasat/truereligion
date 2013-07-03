@@ -1,0 +1,438 @@
+#mw_body {
+	&.mw_cart {
+		padding: $padding*2 0px $padding*5;
+		background-color: $white;
+		width: 320px;
+		margin: 0 auto;
+		
+		#contentWrapper {
+			margin-top: 0px;
+			width: auto;
+			
+			#cart {
+				#cartContent {
+					margin: 0px;
+					
+					h1 {
+						@include h1;
+						font-weight: bold;
+					}
+					
+					#cartGrid {
+						display: block;
+						width: auto;
+						
+						&>thead {
+							display: none;
+						}
+						&>tbody {
+							display: block;
+							width: auto !important;
+							
+							&>tr {
+								display: block;
+								width: auto !important;
+								
+								&>td {
+									display: inline-block;
+									width: auto !important;
+									padding: $padding*3 0px $padding;
+									height: auto;
+									text-align: left;
+									clear: both;
+									
+									&.prodInfo {
+										position: relative;
+										font-size: 14px;
+										height: auto;
+										
+										&:after {
+											content:"Product Information";
+											position: absolute;
+											top: 0px;
+											left: 0;
+											width: 270px;
+											height: 20px;
+											color: $gray8;
+											padding: $padding/2 $padding/5 $padding/2;
+											font-weight: normal;
+											font-size: 13px;
+											font-family: "tradegothicregular";
+											display: block;
+											text-transform: uppercase;
+										}	
+										
+										.prodDsc {
+											width: 170px;
+											
+											.prodAttr {
+												p {
+													&>span {
+														font-weight: bold;
+													}
+													strong {
+														font-size: 14px;
+														display: block;
+														margin-top: $margin/2;
+													}
+												}
+											}
+										}
+									}
+									
+									&.shipping {
+										position: relative;
+										font-size: 14px;
+										height: auto;
+										width: auto;
+										float: none;
+										display: block;
+										padding: $padding*3 $padding/5 $padding;
+										
+										&:after {
+											content:"Shipping";
+											position: absolute;
+											top: 0px;
+											left: 0;
+											width: 270px;
+											height: 20px;
+											color: $gray8;
+											padding: $padding/2 $padding/5 $padding/2;
+											font-weight: normal;
+											font-size: 13px;
+											font-family: "tradegothicregular";
+											display: block;
+											text-transform: uppercase;
+										}
+										
+										&>p {
+											display: block;
+											width: auto;
+											height: auto;
+										}
+									}
+									
+									&.qty { 
+										position: relative;
+										font-size: 14px;
+										height: auto;
+										width: auto;
+										float: none;
+										display: block;
+										padding: $padding*3 $padding/5 $padding;
+										
+										&:after {
+											content:"Quantity";
+											position: absolute;
+											top: 0px;
+											left: 0;
+											width: 270px;
+											height: 20px;
+											color: $gray8;
+											padding: $padding/2 $padding/5 $padding/2;
+											font-weight: normal;
+											font-size: 13px;
+											font-family: "tradegothicregular";
+											display: block;
+											text-transform: uppercase;
+										}
+										
+										&>p {
+											display: block;
+											width: auto;
+											height: auto;
+										}
+										
+										input[type="text"] {
+											width: 45px;
+											text-align: center;
+										}
+									}
+									
+									&.status { 
+										position: relative;
+										font-size: 14px;
+										height: auto;
+										width: auto;
+										float: none;
+										display: block;
+										padding: $padding*3 $padding/5 $padding;
+										
+										&:after {
+											content:"Status";
+											position: absolute;
+											top: 0px;
+											left: 0;
+											width: 270px;
+											height: 20px;
+											color: $gray8;
+											padding: $padding/2 $padding/5 $padding/2;
+											font-weight: normal;
+											font-size: 13px;
+											font-family: "tradegothicregular";
+											display: block;
+											text-transform: uppercase;
+										}
+										
+										&>p {
+											display: block;
+											width: auto;
+											height: auto;
+										}
+									}
+									
+									&.each {
+										position: relative;
+										font-size: 14px;
+										height: auto;
+										width: auto;
+										float: none;
+										display: block;
+										padding: $padding*3 $padding/5 $padding;
+										
+										&:after {
+											content:"Each";
+											position: absolute;
+											top: 0px;
+											left: 0;
+											width: 270px;
+											height: 20px;
+											color: $gray8;
+											padding: $padding/2 $padding/5 $padding/2;
+											font-weight: normal;
+											font-size: 13px;
+											font-family: "tradegothicregular";
+											display: block;
+											text-transform: uppercase;
+										}
+										
+										&>p {
+											display: block;
+											width: auto;
+											height: auto;
+										}
+									}
+									
+									&.total {
+										position: relative;
+										font-size: 14px;
+										height: auto;
+										width: auto;
+										float: none;
+										display: block;
+										padding: $padding*3 $padding/5 $padding;
+										
+										&:after {
+											content:"Total";
+											position: absolute;
+											top: 0px;
+											left: 0;
+											width: 270px;
+											height: 20px;
+											color: $gray8;
+											padding: $padding/2 $padding/5 $padding/2;
+											font-weight: normal;
+											font-size: 13px;
+											font-family: "tradegothicregular";
+											display: block;
+											text-transform: uppercase;
+										}
+										
+										&>p {
+											display: block;
+											width: auto;
+											height: auto;
+										}
+									}
+									
+									&.cartItemButtons {
+										display: block;
+										padding: $padding 0px $padding*3;
+										text-align: right;
+										
+										.mw_update {
+											@include btn-black;
+					            font-family: 'Francois One', Arial, sans-serif;
+					            font-size: 14px;
+											float: none;
+											padding: $padding/2 $padding;
+											
+											&:after {
+							          content: attr(data-title);
+								      }
+										}
+										.mw_remove {
+											@include btn-black;
+					            font-family: 'Francois One', Arial, sans-serif;
+											font-size: 14px;
+											float: none;
+											margin-right: $margin/2;
+											padding: $padding/2 $padding;
+											
+											&:after {
+							          content: attr(data-title);
+								      }
+										}
+										
+										hr {
+											top: 0px;
+											margin-top: $margin*2;
+										}
+									}
+								}
+							}
+						}
+					}
+					
+					#subTotalBarContainer {
+						width: auto;
+						height: auto;
+						float: none;
+						display: block;
+						
+						#subTotalBar {
+							position: relative;
+							top: 0;
+							left: 0;
+							height: auto;
+							width: auto;
+							padding: $padding*2 $padding*1.5;
+							
+							.SizeColor {
+								height: auto;
+								float: none;
+								font-size: 18px;
+								line-height: 1.3em;
+								display: block;
+								margin-bottom: $margin;
+								color: $yellow;
+							}
+						}
+					}
+					
+					#cartButtons {
+						margin-top: $margin*3;
+						
+						.lnkContinueShopping {
+							@include btn-black;
+	            font-family: 'Francois One', Arial, sans-serif;
+							width: 200px !important;
+							float: none;
+							margin: 0px auto;
+						}
+						
+						.relative {
+							margin: $margin 0px 0px;
+						}
+						
+						.mw_checkout {
+							@include btn-red;
+	            font-family: 'Francois One', Arial, sans-serif;
+							width: 200px !important;
+							float: none;
+							margin: 0px auto;
+							
+							&:after {
+			          content: attr(data-title);
+				      }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/*
+
+&>tbody {
+											display: block;
+											width: auto !important;
+											
+											&>tr {
+												display: block;
+												width: auto !important;
+												
+												&>td {
+													display: block;
+													width: auto !important;
+													padding: 40px 10px 10px;
+													height: auto;
+													text-align: left;
+												}
+												
+												&:nth-child(1) {
+													display: none;
+												}
+												&:nth-child(2) {
+													&>td:nth-child(1) {
+														position: relative;
+														font-size: 14px;
+														height: auto;
+														
+														&:after {
+															content:"Qty.";
+															position: absolute;
+															top: 0px;
+															left: 0;
+															background-color: #000;
+															width: 270px;
+															height: 20px;
+															color: #fff;
+															padding: 6px 10px 5px;
+															font-weight: bold;
+															font-size: 15px;
+															border-radius: 0px;
+															display: block;
+															text-transform: capitalize;
+														}	
+													}
+													&>td:nth-child(2) {
+														position: relative;
+														font-size: 14px;
+														height: auto;
+														
+														&:after {
+															content:"Item Description";
+															position: absolute;
+															top: 0px;
+															left: 0;
+															background-color: #000;
+															width: 270px;
+															height: 20px;
+															color: #fff;
+															padding: 6px 10px 5px;
+															font-weight: bold;
+															font-size: 15px;
+															border-radius: 0px;
+															display: block;
+															text-transform: capitalize;
+														}	
+														
+														table {
+															display: block;
+															width: auto;
+															
+															tbody {
+																display: block;
+																width: auto;
+																
+																tr {
+																	display: block;
+																	width: auto;
+																	
+																	td {
+																		display: block;
+																		width: auto;
+																		padding: 0px;
+																	}
+																}
+															}
+														}
+													}
+*/
