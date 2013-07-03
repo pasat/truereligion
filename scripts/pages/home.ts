@@ -1,4 +1,9 @@
 $("./body") {
+	$(".//script[contains(@src,'/layout/js/main.js')]") {
+    attributes(src: asset('javascript/m_main.js'))
+	}
+	insert_at("bottom", "script", data-keep: "true", type: "text/javascript", src: asset("javascript/home.js"))
+	
 	$("./div[@id='mw_body']") {
 		add_class("mw_home")
 		attribute("data-role","content")
