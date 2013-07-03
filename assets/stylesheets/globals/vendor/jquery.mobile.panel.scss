@@ -1,5 +1,4 @@
 .ui-panel {
-	font-size: $base-font-size;
   .ui-panel-inner {
     color: white;
     text-transform: capitalize;
@@ -8,7 +7,6 @@
 }
 
 .ui-panel-content-wrap {
-	font-size: $base-font-size;
 	.ui-content {
 		padding: 0px;
 		overflow: visible;
