@@ -19,7 +19,135 @@
 					width: auto;
 					
 					#sli_facets {
-						display: none;
+						display: block;
+						margin-top: 0px;
+						border-top: 1px dashed #7d7d7d;
+						background-color: #474747;
+						padding: $padding $padding*1.5 $padding*2;
+						
+						&>h2 {
+							font-size: 16px;
+							font-family: "tradegothicregular";
+							color: #BCBCBC;
+							text-transform: uppercase;
+							position: relative;
+							padding-left: $padding*3;
+							
+							&:after {
+				        content:"";
+				        position: absolute;
+				        top: -1px;
+				        left: 0px;
+				        width: 30px !important;
+				        height: 21px;
+				        @include sprites-plus;
+				        border-left: 0px dotted rgba($black, 0.35);
+			        }
+						}
+						
+						&>h2[data-ur-toggler-component="button"][data-ur-state="enabled"] {
+							&:after {
+				        @include sprites-minus;
+			        }
+						}
+						
+						.sli_facet_container {
+							text-align: left;
+							padding: $padding*2 0px $padding;
+							
+							&>div[data-ur-set="toggler"] {
+								margin: $margin 0px;
+							}
+							.sli_facet_heading {
+								text-align: left;
+								font-size: 16px;
+								font-family: "tradegothicregular";
+								color: #BCBCBC;
+								padding-left: $padding*3;
+								position: relative;
+								line-height: 20px;
+								
+								&:after {
+					        content:"";
+					        position: absolute;
+					        top: -1px;
+					        left: 0px;
+					        width: 30px !important;
+					        height: 21px;
+					        @include sprites-plus_gray;
+					        border-left: 0px dotted rgba($black, 0.35);
+				        }
+							}
+							
+							.sli_facet_heading[data-ur-toggler-component="button"][data-ur-state="enabled"] {
+								&:after {
+									@include sprites-minus_gray;
+								}
+							}
+							
+							.sli_facets {
+								text-align: left;
+								margin: $margin*1.5 0px $margin*2 6px;
+								
+								&>li {
+									margin: 1px 0px;
+									
+									span {
+										color: #BCBCBC;
+										padding-left: $padding*2.5 !important;
+										padding-right: 0px !important;
+										background-position: left center;
+										
+										a {
+											color: #BCBCBC;	
+											font-size: 14px;
+											
+											.sli_count {
+												padding-left: 0px !important;
+											}
+										}
+									}
+									
+									&.sli_moreless {
+										padding-left: 26px;
+										
+										a {
+											color: #BCBCBC;
+											font-size: 14px;
+											text-transform: uppercase;
+										}
+									}
+									
+									&.inactive_sizes {
+										float: left;
+										width: 60px;
+										margin: $margin/2;
+										padding: 0px;
+										
+										span {
+											padding: $padding/2 $padding 3px !important;
+											
+											a {
+												font-size: 12px !important;
+											}
+										}
+									}
+								}
+							}
+						}
+						
+						#sli_resetfilters {
+							color: #BCBCBC;
+							font-size: 16px;
+							border-top: 1px solid #7d7d7d;
+							display: block;
+							margin: 0px;
+							padding-top: $padding;
+							
+							img {
+								display: none;
+							}
+						}
 					}
 					
 					#list {
@@ -31,14 +159,67 @@
 								margin: 0 auto;
 								text-align: center;
 							}
+							#sli_topbox {
+								padding: $padding $padding*1.5 $padding*2;
+								
+								.sli_bct_search_results {
+									display: block;
+									width: auto;
+									float: none;
+									font-size: 16px;
+									font-family: "tradegothicregular";
+									color: #BCBCBC;
+									
+									.sli_bct_keyword {
+										color: $yellow;
+									}
+								}
+								#sli_search_suggestions_header {
+									display: block;
+									width: auto;
+									float: none;
+									
+									.sli_search_suggestions {
+										font-size: 16px;
+										font-family: "tradegothicregular";
+										color: #BCBCBC;
+										padding-top: $padding/2;
+											
+										.keykeylink {
+											color: $yellow;
+										}
+									}
+								}
+								#sli_bct {
+									display: block;
+									width: auto;
+									float: none;
+									font-size: 16px;
+									font-family: "tradegothicregular";
+									color: $white;
+									
+									
+									.sli_bct {
+										padding-left: 0px;
+									}
+								}
+							}
 							#sli_tabs {
 								.sli_tab_container {
-									padding: $padding/2 $padding;
+									padding: $padding $padding/2 $padding/2;
 									
 									.sli_tabs {
+										display: inline-block;
+										width: 100%;
+										text-align: center;
+										
 										&>li {
-											font-size: 13px;
-											line-height: 26px;
+											font-size: 12px;
+											line-height: 1.4em;
+											display: inline-block;
+											float: none;
+											width: 147px;
+											margin: 2px;
 										}
 									}
 								}

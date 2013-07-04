@@ -184,19 +184,28 @@
       //NOTE: The background image must come before the linear gradient even though we're using the multiple-backgrounds syntax, or it won't show
      /*  @include background(image-url($search-btn-bg-image) no-repeat 0 center); */
       background-color: $search-btn-bg-color;
-      border-top: $search-border-size solid $search-border-color;
-      border-bottom: $search-border-size solid $search-border-color;
-      border-right: $search-border-size solid $search-border-color;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      border-top-right-radius: $search-bar-border-radius;
-      border-bottom-right-radius: $search-bar-border-radius;
+      border: 1px solid $gray6;
       text-indent: -9999px;
+      position: relative;
+      border-radius: 4px;
+      display: block;
+      
+      &:after {
+	      content:"Go";
+	      top: 5px;
+	      left: 10px;
+	      display: block;
+	      width: 40px;
+	      height: 30px;
+	      color: $gray7;
+	      position: absolute;
+	      text-indent: 0px;
+	      font-family: 'Francois One', Arial, sans-serif;
+	      text-transform: uppercase;
+	      z-index: 0;
+      }
     }
-    
-    a.mw_search_btn {
-      display: none;
-    }
+   
   }
   div.mw_search_bar[data-ur-state="disabled"] {
 	  display: block !important;
@@ -461,4 +470,13 @@
 	    }
     }
   }
+}
+
+.autocomplete {
+	font-family: $font-family !important;
+	font-size: 13px !important;
+	
+	.autocomplete_item {
+		padding: 1px 1px 1px 8px !important;
+	}
 }
