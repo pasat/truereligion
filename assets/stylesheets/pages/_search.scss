@@ -70,7 +70,7 @@
 								&:after {
 					        content:"";
 					        position: absolute;
-					        top: -1px;
+					        top: -2px;
 					        left: 0px;
 					        width: 30px !important;
 					        height: 21px;
@@ -132,6 +132,19 @@
 											}
 										}
 									}
+									
+									.sli_children {
+										margin-left: $margin*3;
+									}
+								}
+								
+								.sli_reset {
+									color: #BCBCBC;
+									font-size: 13px !important;
+									text-transform: uppercase;
+									padding-left: $padding*2.5;
+									padding-top: $padding;
+									display: block;
 								}
 							}
 						}
