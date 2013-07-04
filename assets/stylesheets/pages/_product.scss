@@ -2,8 +2,9 @@
 	&.mw_product {
 		padding: 0px;
 		background-color: $white;
-		width: 320px;
+		width: auto;
 		margin: 0 auto;
+		overflow: hidden;
 		
 		#contentWrapper {
 			margin-top: 0px;
@@ -22,9 +23,13 @@
 					#productMedia {
 						float: none;
 						width: auto;
+						height: auto;
 						display: block;
+						padding: $padding/2;
 						
 						#MainImageRegion {
+							text-align: center;
+							
 							img {
 								width: auto !important;
 								height: auto !important;
@@ -253,7 +258,6 @@
 							
 							div[data-ur-carousel-component="scroll_container"] {
 								div[data-ur-carousel-component="item"] {
-									width: 320px;
 									text-align: center;
 									
 									&>a {

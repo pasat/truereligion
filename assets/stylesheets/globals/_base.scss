@@ -43,3 +43,35 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-touch-callout: none;
   @include box-sizing(border-box);
 }
+
+
+@media screen and (max-width: 480px) {
+  #mw_body {
+	  &.mw_product {
+		  #alsoBought,
+		  #recViewed {
+				div[data-ur-carousel-component="scroll_container"] {
+					div[data-ur-carousel-component="item"] {
+						width: 480px;
+					}
+				}
+			}
+	  }
+	}
+}
+
+@media screen and (max-width: 320px) {
+  #mw_body {
+	  &.mw_product {
+		  
+		  #alsoBought,
+		  #recViewed {
+				div[data-ur-carousel-component="scroll_container"] {
+					div[data-ur-carousel-component="item"] {
+						width: 320px;
+					}
+				}
+			}
+	  }
+	}
+}
