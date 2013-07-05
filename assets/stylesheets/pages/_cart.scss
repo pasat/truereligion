@@ -1,8 +1,8 @@
 #mw_body {
 	&.mw_cart {
 		padding: $padding*2 0px $padding*5;
-		background-color: $white;
-		width: 320px;
+		background-color: #fbfaf7;
+		width: auto;
 		margin: 0 auto;
 		
 		#contentWrapper {
@@ -16,11 +16,14 @@
 					h1 {
 						@include h1;
 						font-weight: bold;
+						margin-bottom: $margin;
+						padding: 0px $padding*1.5;
 					}
 					
 					#cartGrid {
 						display: block;
 						width: auto;
+						padding: 0px $padding*1.5;
 						
 						&>thead {
 							display: none;
@@ -62,6 +65,18 @@
 											text-transform: uppercase;
 										}	
 										
+										&>a {
+											input[type="image"] {
+												border-radius: 0px;
+												width: 120px !important;
+												height: auto !important;
+											}	
+										}
+										
+										.prodName {
+											padding-bottom: $padding;
+											font-size: 18px;
+										}
 										.prodDsc {
 											width: 170px;
 											
@@ -146,6 +161,8 @@
 										input[type="text"] {
 											width: 45px;
 											text-align: center;
+											background-color: $white;
+											margin-bottom: $margin/2;
 										}
 									}
 									
@@ -335,6 +352,10 @@
 							&:after {
 			          content: attr(data-title);
 				      }
+						}
+						
+						.cntBtnPaypal {
+							display: none !important;
 						}
 					}
 				}
