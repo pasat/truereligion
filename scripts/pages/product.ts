@@ -13,6 +13,13 @@ $("./body") {
 			
 			$("./div[@id='detail']") {
 				$("./div[@class='productsDetailsMain']") {
+					$("./div[@id='productMedia']") {
+						$("./div[@id='MainImageRegion']") {
+							$("./img") {
+								remove('@style')
+							}
+						}
+					}
 					$("./div[@id='productDsc']") {
 						$("./div[@id='productActions']") {
 							$("./div[@class='wishlistbuttonclass']") {

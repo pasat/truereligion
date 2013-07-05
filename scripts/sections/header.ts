@@ -70,39 +70,95 @@ $('./body') {
   #### EVERYTHING BELOW THIS LINE SHOULD BE MODIFIED FOR YOUR SITE ####
   
   $(xpath_from_body("nav[@id='mw_main_nav']")) {
-      $("h2/a") {
-        insert_menu_item(fetch("text()"), "")
-      }  	
-      
-      $("div[contains(@id,'womensnav')]") {
-		    add_class("mw_nav_sub_content")
-		    attribute("data-ur-set","toggler")
-		    
-		    $("h3/a") {
-			    name("div")
-			    add_class("mw_nav_sub_btn_inner")
-		    }
-		    inner_wrap("div") {
-			    add_class("mw_nav_sub_btn")
-			    attribute("data-ur-toggler-component","button")
-					attribute("data-ur-state","disabled")
-		    }
-		    insert("div") {
-			    add_class("mw_nav_sub_content_inner")
-			    attribute("data-ur-toggler-component","content")
-					attribute("data-ur-state","disabled")
-		    }
- 		    move_to("//div[@class='mw_nav_item'][1]//ul[@class='mw_nav_content']")
+    $("h2/a") {
+      insert_menu_item(fetch("text()"), "")
+    }  	
+    
+    $("div[contains(@id,'womensnav')]") {
+	    add_class("mw_nav_sub_content")
+	    
+		  move_to("//div[@class='mw_nav_item'][1]//ul[@class='mw_nav_content']")
+    }
+    
+    $("div[contains(@id,'mensnav')]") {
+	    add_class("mw_nav_sub_content")
+	    
+		  move_to("//div[@class='mw_nav_item'][2]//ul[@class='mw_nav_content']")
+    }
+    
+    $("div[contains(@id,'kidsnav')]") {
+	    add_class("mw_nav_sub_content")
+	    
+		  move_to("//div[@class='mw_nav_item'][3]//ul[@class='mw_nav_content']")
+    }
+    
+    $("div[contains(@id,'pressnav')]") {
+	    add_class("mw_nav_sub_content")
+	    
+		  move_to("//div[@class='mw_nav_item'][4]//ul[@class='mw_nav_content']")
+    }
+  }
+  
+  $(xpath_from_body("div[@id='user-utility']")) {
+	  $("a[contains(@id,'signIn')]") {
+	    add_class("mw_nav_btn_link")
+	    wrap("div", class: "mw_nav_btn") {
+			  wrap("div", class: "mw_nav_item") {
+				  move_to("/html/body/div[@id='mw_menu_content']") 
+			  }  
 	    }
+	    
+		  move_to("//div[@class='mw_nav_item'][6]//ul[@class='mw_nav_content']")
+    }
+  }
+  
+  $(xpath_from_body("div[@id='header-nav']")) {
+	  $("ul/li[2]/a") {
+	    add_class("mw_nav_btn_link")
+	    wrap("div", class: "mw_nav_btn") {
+			  wrap("div", class: "mw_nav_item") {
+				  move_to("/html/body/div[@id='mw_menu_content']") 
+			  }  
+	    }
+	    
+		  move_to("//div[@class='mw_nav_item'][7]//ul[@class='mw_nav_content']")
+    }
+  }
+  
+  $(xpath_from_body("div[@id='header-nav']")) {
+	  $("ul/li[3]/a") {
+	    add_class("mw_nav_btn_link")
+	    wrap("div", class: "mw_nav_btn") {
+			  wrap("div", class: "mw_nav_item") {
+				  move_to("/html/body/div[@id='mw_menu_content']") 
+			  }  
+	    }
+	    
+		  move_to("//div[@class='mw_nav_item'][8]//ul[@class='mw_nav_content']")
+    }
+  }
+  
+  $(xpath_from_body("div[@id='header-nav']")) {
+	  $("ul/li[1]") {
+	    wrap("div", class: "mw_nav_btn") {
+			  wrap("div", class: "mw_nav_item") {
+				  move_to("/html/body/div[@id='mw_menu_content']") 
+			  }  
+	    }
+	    
+		  move_to("//div[@class='mw_nav_item'][9]//ul[@class='mw_nav_content']")
+    }
   }
   
   ## To insert a visual separator in the navigation menu
-#   insert_menu_item_separator("") {
-#    move_to("../*[1]", "after")
-#   }
-#   insert_menu_item_separator("") {
-#    move_to("../*[8]", "after")
-#   }
+  insert_menu_item_separator("Account") {
+    move_to("../*[5]", "after")
+  }
+	insert_menu_item_separator("More Options") {
+    move_to("../*[7]", "after")
+  }
   ## To insert a link at the same level as the navigation menu accordions
   # insert_menu_top_level_link("Example Top Level Link", "www.example.com") 
 }
+
+

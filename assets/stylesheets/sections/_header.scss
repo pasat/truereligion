@@ -238,14 +238,15 @@
 	background-color: #e7e4db;
  
   div.mw_nav_item_separator {
-    padding: $padding/2 $padding*2;
+    padding: $padding*1.2 $padding/2;
     font-size: $nav-separator-font-size;
     line-height: $nav-separator-font-size;
     color: $nav-separator-font-color;
-    border-bottom: 1px solid rgba(black, 0.50);
-    border-top: 1px solid rgba(white, 0.05);
+    border-bottom: 1px solid rgba(black, 0.10);
+    border-top: 1px solid rgba(white, 0.35);
     @include background($nav-separator-bg-color, linear-gradient($nav-separator-gradient-top-color, $nav-separator-gradient-bottom-color));
     text-transform: uppercase;
+    text-shadow: $text-shadow-white;
   }
   .mw_nav_item {
     .mw_nav_btn {
@@ -265,14 +266,14 @@
         display: block;
         text-transform: uppercase;
         color: #4e4d46;
-        padding-left: $padding*3;
+        padding-left: $padding/2;
         text-shadow: $text-shadow-white;
         
         &:after {
 	        content:"";
 	        position: absolute;
 	        top: 5px;
-	        left: 0px;
+	        right: 3px;
 	        width: 30px !important;
 	        height: 21px;
 	        @include sprites-plus;
@@ -292,7 +293,7 @@
 		        content:"";
 		        position: absolute;
 		        top: 5px;
-		        right: 8px;
+		        right: 3px;
 		        width: 30px !important;
 		        height: 21px;
 		        @include sprites-minus;
@@ -303,8 +304,34 @@
       
       .mw_nav_btn_link {
 	      &:after {
-		      /* @include sprites-arrow; */
+		      @include sprites-arrow_link;
 	      }
+      }
+      
+      #country-select {
+	      list-style: none;
+	      padding-left: $padding/2;
+	      
+	      #Header1_wcLocalization_tdLocalizationCountryFlag,
+	      #Header1_wcLocalization_dvShippingLocalization {
+		      &>a {
+			      display: block;
+			      color: #4E4D46;
+			      text-shadow: $text-shadow-white;
+			      text-transform: uppercase;
+			      width: 230px;
+			      
+			      #Header1_wcLocalization_imgShippingCountryFlag,
+			      .imgText {
+				      float: right;
+					    margin-right: 3px;
+					    margin-top: 8px;
+						  border: 1px solid $gray7;
+						  padding: 1px;
+						  background-color: $white;
+			      }
+		      }
+				}   
       }
     }
     .mw_nav_content {
@@ -312,12 +339,84 @@
       margin: 0;
       border: none;
       padding: 0px 0px;
+      border-bottom: 1px solid rgba(black, 0.10);
+      border-top: 1px solid rgba(white, 0.35);
       
       .mw_nav_sub_content {
         list-style-type: none;
         background-color: $nav-item-background-color;
-        padding: 0px 0px;
+        padding: $padding $padding $padding $padding/2;
         margin: 0px 0px;
+        
+        br {
+	        display: none !important;
+        }
+        
+        &>h3 {
+	        color: #2C2C2C;
+				  font-family: "tradegothicregular";
+				  font-size: 18px;
+				  text-transform: uppercase;
+				  border-top: 1px dotted #ccc;
+				  display: block;
+				  padding: 6px 0px 2px;
+				  
+				  &:first-child {
+					  border-top: none;
+				  }
+					  
+				  &>a {
+					  color: #2C2C2C !important;
+					  font-family: "tradegothicregular";
+					  font-size: 18px;
+					  line-height: 1.3em !important;
+					  text-transform: uppercase;
+					  position: relative;
+					  display: block;
+					  
+					  &:after {
+						  content:"";
+						  position: absolute;
+						  top: 3px;
+						  right: 4px;
+						  display: block;
+						  width: 20px;
+						  height: 20px;
+				      @include sprites-arrow_nav;
+			      }
+				  }
+			  }
+			  
+			  &>ul {
+				  padding: $padding 0px;
+				  
+				  &>li {
+					  height: auto;
+					  
+					  a {
+						  color: #605E5E;
+						  font-weight: normal;
+						  font-size: 14px;
+						  line-height: 1.3em !important;
+						  padding: 4px 0px 4px 20px;
+						  display: block;
+						  position: relative;
+						  
+						  &:after {
+							  content:"";
+							  position: absolute;
+							  top: 4px;
+							  left: -2px;
+							  display: block;
+					      @include sprites-blackArrowRight;
+				      }
+				      
+				      &:hover {
+					      color: #605E5E;
+				      }
+					  }
+				  }
+			  }
         
         .mw_nav_sub_btn {
 	        padding: $padding*0.9 0px $padding*0.9 $padding*3;
