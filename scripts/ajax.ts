@@ -10,6 +10,14 @@ log("--> Running ajax.ts")
 #   }
 # }
 
+match($path) {
+   with(/store\/productdetails/) {
+     html_fragment() {
+        remove('.//meta | .//link | .//script | .//title');
+     }
+   }
+}
+
 # needed for product images
 # replace("%24", "$")
 # replace("&amp;", "&")

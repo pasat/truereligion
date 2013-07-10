@@ -71,7 +71,7 @@ input[type="number"]::-webkit-outer-spin-button {
 	  }
 	  &.mw_product {
 		  #productMedia {
-			  padding: $padding*2 0px $padding;
+			  padding: 0px 0px $padding;
 		  }
 		  #alsoBought,
 		  #recViewed {
@@ -114,7 +114,7 @@ input[type="number"]::-webkit-outer-spin-button {
 		  overflow: hidden !important;
 		  
 		  #productMedia {
-			  padding: $padding/2;
+			  padding: 0px;
 		  }
 		  #alsoBought,
 		  #recViewed {

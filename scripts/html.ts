@@ -1,6 +1,6 @@
 # HTML Transformations go here
 
-$("/html") {
+$("/html[1]") {
   rewrite_links()
   absolutize_srcs()
 
@@ -29,6 +29,14 @@ $("/html") {
   @import "mw_analytics.ts"
 
   add_assets()
+
+  $('./body'){
+    $('.//form[contains(@id, "HtmlForm")]'){
+      $form_onsubmit = fetch('@onsubmit');
+      $form_action = fetch('@action');
+      $form_id = fetch('@id');
+    }
+  }
 
   @import sections/scaffold.ts
   @import sections/footer.ts

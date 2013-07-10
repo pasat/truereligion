@@ -4,6 +4,7 @@
   :input_files:
   - host_map.js
   - vendor/jquery-1.9.1.min.js
+  - vendor/jquery-migrate.js
   - http://d1topzp4nao5hp.cloudfront.net/uranium-upload/0.1.122/uranium-pretty.js
   - http://d1topzp4nao5hp.cloudfront.net/plutonium-upload/0.1.82/moovweb.js
   - http://d1topzp4nao5hp.cloudfront.net/plutonium-upload/0.1.82/gsub.js
