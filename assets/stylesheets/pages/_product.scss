@@ -164,6 +164,12 @@
 								width: 180px !important;
 								float: none;
 							}
+							.btnCheckOut {
+								@include btn-red;
+								font-family: 'Francois One', Arial, sans-serif;
+								width: 180px !important;
+								float: none;
+							}
 						}
 
 						#productActions {

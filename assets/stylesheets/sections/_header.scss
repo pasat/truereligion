@@ -27,16 +27,16 @@
       padding: 0px;
         
 	    #mainLogo {
-	      position: relative;
-	      top: 6px;
-	      left: 0;
-	      width: 120px;
-	      height: 25px;
-	      margin: 0px auto 0px;
-        text-decoration: none;
-        display: block;
-        padding-top: 0px;
-        text-indent: -9999px;
+			position: relative;
+			top: 6px;
+			left: 0;
+			width: 120px;
+			height: 25px;
+			margin: 0px auto 0px;
+			text-decoration: none;
+			display: block;
+			padding-top: 0px;
+			text-indent: -9999px;
         
         &:after {
 	        content:"";
@@ -44,12 +44,12 @@
 	        top: 6px;
 	        left: 0;      
 	        @include background-image(image-url("logo.png"));
-					@include background-size(120px 25px);
-					background-position: 0px 0px;
-					background-repeat: no-repeat;
-					width: 120px;
-					height: 25px;
-					display: block;
+			@include background-size(120px 25px);
+			background-position: 0px 0px;
+			background-repeat: no-repeat;
+			width: 120px;
+			height: 25px;
+			display: block;
         }
       } 
     }
@@ -89,23 +89,23 @@
 
           #mw_cart_counter {
             position: absolute;
-					  top: 6px;
-					  left: 21px;
-					  float: right;
-					  display: block;
-					  text-align: center;
-					  font-size: $cart-counter-font-size;
-					  font-family: $arial;
-					  line-height: $cart-counter-height;
-					  color: $cart-counter-font-color;
-					  width: $cart-counter-height;
-					  height: $cart-counter-height;
-					  border-radius: $cart-counter-border-radius;
-					  background-color: $cart-counter-bg-color;
-					  margin-top: $cart-counter-offset;
-					  margin-right: $cart-counter-offset;
-					  text-decoration: none;
-					  font-weight: bold;
+			top: 6px;
+			left: 21px;
+			float: right;
+			display: block;
+			text-align: center;
+			font-size: $cart-counter-font-size;
+			font-family: $arial;
+			line-height: $cart-counter-height;
+			color: $cart-counter-font-color;
+			width: $cart-counter-height;
+			height: $cart-counter-height;
+			border-radius: $cart-counter-border-radius;
+			background-color: $cart-counter-bg-color;
+			margin-top: $cart-counter-offset;
+			margin-right: $cart-counter-offset;
+			text-decoration: none;
+			font-weight: bold;
           }
         }
         a {
@@ -578,4 +578,8 @@
 	.autocomplete_item {
 		padding: 1px 1px 1px 8px !important;
 	}
+}
+
+.cartDropDown {
+	display: none !important;
 }

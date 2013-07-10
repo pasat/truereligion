@@ -17,7 +17,7 @@ $('./body') {
       }
       insert_header_buttons("right") {
         %cart_counter_text = strip_non_digits(fetch(xpath_from_body("div[@id='cart-info']/a/span[@class='cartCount']/text()"))) # CHANGE THIS
-        insert_cart_button_with_counter("cart.php", %cart_counter_text) # CHANGE THIS
+        insert_cart_button_with_counter("/store/shoppingcart.aspx", %cart_counter_text) # CHANGE THIS
       }
       grab_site_logo("/html/body//a[@id='mainLogo']") # CHANGE THIS
 
@@ -32,36 +32,36 @@ $('./body') {
     #insert_search_bar("get", "search.php", "return check_small_search_form()") # CHANGE THIS
 
     move_here("//div[@id='searchContainer']") {
-			attribute("class","mw_search_bar")
+		attribute("class","mw_search_bar")
 
 
-			## Search Page
-			$("./form") {
-				move_here(".//input[@id='searchSubmit']","top") {
-					add_class("mw_search_btn")
-				}
-			}
-
-			$(".//input[@id='sli_search_1']") {
-				add_class("mw_search_field")
-
-				wrap("div") {
-					add_class("mw_search_field_container")
-				}
-			}
-
-			## Home Page
-			$("./input[@id='searchfield']") {
-				add_class("mw_search_field")
-
-				wrap("div") {
-					add_class("mw_search_field_container")
-				}
-			}
-			$("./a[@id='searchSubmit']") {
+		## Search Page
+		$("./form") {
+			move_here(".//input[@id='searchSubmit']","top") {
 				add_class("mw_search_btn")
-				move_to("//div[@id='searchContainer']","top")
 			}
+		}
+
+		$(".//input[@id='sli_search_1']") {
+			add_class("mw_search_field")
+
+			wrap("div") {
+				add_class("mw_search_field_container")
+			}
+		}
+
+		## Home Page
+		$("./input[@id='searchfield']") {
+			add_class("mw_search_field")
+
+			wrap("div") {
+				add_class("mw_search_field_container")
+			}
+		}
+		$("./a[@id='searchSubmit']") {
+			add_class("mw_search_btn")
+			move_to("//div[@id='searchContainer']","top")
+		}
     }
   }
 
