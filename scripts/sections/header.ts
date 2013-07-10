@@ -162,28 +162,28 @@ $('./body') {
   ## To insert a link at the same level as the navigation menu accordions
   # insert_menu_top_level_link("Example Top Level Link", "www.example.com")
 
-  $(".//script") {
-	    text(){
-	        rewrite_link();
-	    }
-	    move_to("/html/body", "bottom");
+	$(".//script") {
+		text(){
+			rewrite_link();
+		}
+		move_to("/html/body", "bottom");
 	}
 
 	remove("script[contains(@src, 'steelhouse')]");
 
 	$(".//div[@class='aspNetHidden']"){
-	    move_to("/html/body/div[@id='mw_body']", "top");
+		move_to("/html/body/div[@id='mw_body']", "top");
 	}
 
-	remove(".//form[contains(@id, 'HtmlForm')]");
+	remove(".//form[contains(@id, 'HtmlForm') and not(@id='_CHtmlForm1')]");
 
 	$(".//span[@id='mw_cart_counter']"){
-	    attributes(class: "cartCount");
+		attributes(class: "cartCount");
 	}
 
 	$("div[@id='mw_body']"){
-	    insert_top("div", class: "cartDropDown");
-	    inner_wrap("form", onsubmit: $form_onsubmit, action: $form_action, method: "post", id: $form_id);
+		insert_top("div", class: "cartDropDown");
+		inner_wrap("form", onsubmit: $form_onsubmit, action: $form_action, method: "post", id: $form_id);
 	}
 }
 
