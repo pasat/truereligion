@@ -3,7 +3,7 @@
 $("/html") {
   rewrite_links()
   absolutize_srcs()
-  
+
   $("./head") {
     insert("link", rel: "stylesheet", type: "text/css", href: "http://fonts.googleapis.com/css?family=Francois+One")
 	}
@@ -14,7 +14,7 @@ $("/html") {
   # Needed to begin mobilizing
   # remove_all_styles()
   remove_html_comments()
-  
+
   $(".//link[contains(@href,'layout/css/main.css')]") {
 		remove()
 	}
@@ -27,8 +27,6 @@ $("/html") {
 
   # Include mw_analytics file to track the mobile site
   @import "mw_analytics.ts"
-
-  
 
   add_assets()
 
